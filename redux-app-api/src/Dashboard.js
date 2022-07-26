@@ -29,7 +29,7 @@ class Users extends Component {
             <>
            <section>
             {users.map(u=>
-  <div className="column card-style">
+  <div className="column card-style" id={u.author}>
     <figure>
       <img
         src={u.urlToImage}
@@ -41,7 +41,7 @@ class Users extends Component {
       {u.description}
       </p>
     </div>
-    <a href=''>Delete</a>
+    <a href='#' id='delete-id' onClick={()=>this.handleButton(u.author)}>Delete</a>
   </div>
   )}
   
